@@ -9,12 +9,17 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
     <ul>
-        <li>Your controller at <code><a href="{{ '/home/victor/PhpstormProjects/fonbreak/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/victor/PhpstormProjects/fonbreak/templates/homepage/index.html.twig'|file_link(0) }}">templates/homepage/index.html.twig</a></code></li>
+        {% for user in users %}
+        <li>
+            {{ user.email }}
+            <small>
+                {{ "%d - %d"|format(user.shiftStart|date('H'), user.shiftEnd|date('H')) }}
+            </small>
+            <button>dfg</button>
+        </li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}
