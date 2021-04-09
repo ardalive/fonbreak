@@ -1,0 +1,6 @@
+@import '~bootstrap';
+@import '~normalize.css';
+
+body {
+    background-color: #82d0cf;
+}
